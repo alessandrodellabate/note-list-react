@@ -3,10 +3,7 @@ import Modal from "./components/Modal";
 import Button from "./components/Button";
 import Note from "./components/Note";
 
-import { MdAddCircle } from "react-icons/md";
-
 import { useNotes } from "./useNotes";
-import { Suspense, lazy } from "react";
 import { v4 as uuid } from "uuid";
 import "./styles.css";
 
@@ -77,15 +74,13 @@ export default function App() {
       <ul className="mt-4 space-y-4 divide-y">
         {notes.map((note) => {
           return (
-            <Suspense fallback={<div></div>} key={note.id}>
-              <Note
-                key={note.id}
-                title={note.title}
-                description={note.description}
-                onClickEdit={showEditModal}
-                onClickDelete={showDeleteModal}
-              />
-            </Suspense>
+            <Note
+              key={note.id}
+              title={note.title}
+              description={note.description}
+              onClickEdit={showEditModal}
+              onClickDelete={showDeleteModal}
+            />
           );
         })}
       </ul>

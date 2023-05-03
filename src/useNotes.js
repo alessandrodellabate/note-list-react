@@ -8,7 +8,7 @@ export const useNotes = () => {
   const modal = useModal(Modal);
 
   const axiosInstance = axios.create({
-    baseURL: "http://192.168.1.16:3500",
+    baseURL: "http://localhost:3500",
   });
 
   const { data, isLoading } = useQuery({
