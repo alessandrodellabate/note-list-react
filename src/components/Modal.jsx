@@ -46,7 +46,7 @@ const Modal = NiceModal.create(
           <h1 className="mb-2 text-center text-2xl font-bold leading-tight">
             {title}
           </h1>
-          <p className="text-center mb-2">{subtitle}</p>
+          <p className="mb-2 text-center">{subtitle}</p>
           {(action === "Salva" || action === "Aggiorna") && (
             <div>
               <div className="mb-3">
@@ -57,7 +57,7 @@ const Modal = NiceModal.create(
                   ref={titleRef}
                   id={titleInputId}
                   name="title"
-                  className="w-full text-sm rounded-md border border-[silver] px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-600"
+                  className="w-full rounded-md border border-[silver] px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-slate-600"
                   type="text"
                   value={inputs.title}
                   onChange={handleOnChangeInput}
@@ -71,7 +71,7 @@ const Modal = NiceModal.create(
                   id={descriptionInputId}
                   name="description"
                   rows={5}
-                  className="mt-1 w-full text-sm rounded-md border border-[silver] px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-600"
+                  className="mt-1 w-full rounded-md border border-[silver] px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-slate-600"
                   type="text"
                   value={inputs.description}
                   onChange={handleOnChangeInput}
